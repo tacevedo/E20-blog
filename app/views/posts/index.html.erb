@@ -18,7 +18,9 @@
         <td><%= link_to "#{post.title}", post %></td>
         <td><%= post.user.name %></td>
         <td><%= post.comments.count %></td>
+          <% if can?(:destroy, post) %>
         <td><%= link_to 'Editar', edit_post_path(post), class: 'btn btn-sm btn-success' %></td>
+        <% end %>
         <td>
           <% if can?(:destroy, post) %>
 
