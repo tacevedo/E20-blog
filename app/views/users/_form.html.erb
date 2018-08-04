@@ -1,0 +1,15 @@
+<%= form_with model: @user, local: true do |u| %>
+  <!-- <input type="hidden" value="<%=form_authenticity_token%>"name="authenticity_token"> -->
+
+  <div class="form-group">
+    <%= u.label :role, "role" %>
+    <%= u.number_field :role , class: 'form-control' %>
+  </div>
+
+
+  <div class="float-right">
+    <%= u.submit "Guardar", class: 'btn btn-primary btn-lg' %>
+  </div>
+
+
+<% end %>

@@ -11,9 +11,9 @@
     <tr>
       <td> <%= user.name %> </td>
       <td><%= user.email %></td>
-      <td><%= link_to 'Editar', edit_post_path(post), class: 'btn btn-sm btn-success' %></td>
+      <td><%= link_to 'Editar', edit_path(user), class: 'btn btn-sm btn-success' %></td>
       <td>
-        <%= link_to 'Eliminar', post, method: :delete, data: { confirm: 'Estás seguro que deseas eliminar el Post?' }, class: 'btn btn-sm btn-danger' %>
+          <%= link_to "Eliminar", delete_path(user), method: :delete, class: 'btn btn-danger btn-sm' %>
       </td>
     </tr>
     <% end %>

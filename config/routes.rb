@@ -14,7 +14,8 @@ Rails.application.routes.draw do
 	root 'posts#index'
 
 	get '/users',   to: 'users#index'
-  # get '/users',   to: 'users#destroy'
-  # get '/users',   to: 'users#edit'
+  get 'users/:id/edit', to: 'users#edit', as: 'edit'
+  patch 'users/:id', to: 'users#update'
+  delete 'users/:id', to: 'users#destroy', as: 'delete'
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
